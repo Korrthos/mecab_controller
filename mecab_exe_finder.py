@@ -31,8 +31,8 @@ def get_bundled_executable(name: str) -> str:
     """
     path_to_exe = os.path.join(SUPPORT_DIR, name) + support_exe_suffix()
     assert os.path.isfile(path_to_exe), f"{path_to_exe} doesn't exist. Can't recover."
-    if not IS_WIN:
-        os.chmod(path_to_exe, 0o755)
+    # if not IS_WIN:
+    #     os.chmod(path_to_exe, 0o755)
     return path_to_exe
 
 
